@@ -8,13 +8,13 @@
     # My bookmark plugin
     (writeTextFile {
       name = "bookmarks.zsh";
-      text = ''${builtins.readFile ./dotfiles/zsh/bookmarks.zsh}'';
+      text = ''${builtins.readFile ./zsh/bookmarks.zsh}'';
       destination = "/share/zsh/site-functions/bookmarks.zsh";
     })
     # My cursor plugin
     (writeTextFile {
       name = "cursor_mode.zsh";
-      text = ''${builtins.readFile ./dotfiles/zsh/cursor_mode.zsh}'';
+      text = ''${builtins.readFile ./zsh/cursor_mode.zsh}'';
       destination = "/share/zsh/site-functions/cursor_mode.zsh";
     })
   ];
@@ -67,9 +67,9 @@
     ];
     interactiveShellInit = ''
       # Enable vim editing of command line
-      ${builtins.readFile ./dotfiles/zsh/01-vim-edit.zsh}
+      ${builtins.readFile ./zsh/01-vim-edit.zsh}
       # Enable cd +1..9 to go back in dir stack
-      ${builtins.readFile ./dotfiles/zsh/02-cd.zsh}
+      ${builtins.readFile ./zsh/02-cd.zsh}
       # fzf bindings
       source ${pkgs.fzf}/share/fzf/key-bindings.zsh
 
