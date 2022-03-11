@@ -41,9 +41,6 @@ in
       syntaxHighlighting = {
         enable = true;
       };
-      # Aliases
-      # TODO: help sez 'Set of aliases for zsh shell, which overrides environment.shellAliases'
-      # Need to merge them? 
       shellAliases = {
         e = "vim";  # looks like 'vim' is needed here so that proper vimrc is being picked up
         nvim = "vim";
