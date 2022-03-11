@@ -101,7 +101,6 @@ in
         bindkey "^[b" backward-word
         # working backspace
         bindkey -v '^?' backward-delete-char
-        # TODO: alt+hjkl -> arrows
 
         # Use vim keys in tab complete menu
         zmodload zsh/complist
