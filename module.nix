@@ -144,7 +144,8 @@ in
         else
           toString null
         }
-
+        # alias that creates the directory and changes into it
+        mkcd(){ mkdir -p "$@" && cd "$@"; }
       '';
       promptInit = ''
         ${if config ? my_zsh && cfg.starship_enable
