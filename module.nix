@@ -126,7 +126,7 @@
 
     '';
     promptInit = ''
-      eval "$(${pkgs.starship} init zsh)"
+      eval "$(${pkgs.starship}/bin/starship init zsh)"
       eval "$(direnv hook zsh)"
     '';
   };
