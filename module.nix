@@ -31,7 +31,9 @@ in
         text = ''${builtins.readFile ./zsh/cursor_mode.zsh}'';
         destination = "/share/zsh/site-functions/cursor_mode.zsh";
       })
-    ];
+      # the next line conditionally installs direnv if it is enabled
+      # just having pkgs.direnv is not enough, it does not get added to the path
+    ] ++ (if config ? my_zsh && cfg.direnv_enable then [ pkgs.direnv ] else []);
     programs.zsh = {
       enable = true;
       enableCompletion = true;
