@@ -56,7 +56,6 @@ in
         mv = "mv -v";
         rm = "rm -id";
         vidir = "${pkgs.moreutils}/bin/vidir --verbose";
-        # My default shortcut to copy to clipboard, TODO: make wayland/Xorg/Mac agnostic
         ccopy = "${pkgs.wl-clipboard}/bin/wl-copy";
       };
       setOptions = [
