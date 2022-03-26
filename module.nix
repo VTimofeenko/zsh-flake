@@ -42,8 +42,9 @@ in
         enable = true;
       };
       shellAliases = {
-        e = "vim";  # looks like 'vim' is needed here so that proper vimrc is being picked up
-        nvim = "vim";
+        e = "$EDITOR";  # looks like 'vim' is needed here so that proper vimrc is being picked up
+        nvim = "$EDITOR";
+        vim = "$EDITOR";
         ls = "${pkgs.exa}/bin/exa -h --group-directories-first --icons";
         l = "ls";
         ll = "ls -l";
