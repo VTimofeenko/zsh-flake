@@ -58,6 +58,7 @@ in
         rm = "rm -id";
         vidir = "${pkgs.moreutils}/bin/vidir --verbose";
         ccopy = "${pkgs.wl-clipboard}/bin/wl-copy";
+        syu = "systemctl --user";
       };
       setOptions = [
         "INTERACTIVE_COMMENTS"  # allow bash-style comments
