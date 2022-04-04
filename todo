@@ -1,2 +1,4 @@
+* Reduce modules in starship
+* Add colors to tab-menu
 * Make ccopy alias wayland/Xorg/Mac agnostic
 * Add starship config?
