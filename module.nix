@@ -59,6 +59,7 @@ in
         vidir = "${pkgs.moreutils}/bin/vidir --verbose";
         ccopy = "${pkgs.wl-clipboard}/bin/wl-copy";
         syu = "systemctl --user";
+        cde = "cd /etc/nixos";
       };
       setOptions = [
         "INTERACTIVE_COMMENTS"  # allow bash-style comments
