@@ -60,6 +60,7 @@ in
         ccopy = "${pkgs.wl-clipboard}/bin/wl-copy";
         syu = "systemctl --user";
         cde = "cd /etc/nixos";
+        lg = "lazygit";
       };
       setOptions = [
         "INTERACTIVE_COMMENTS"  # allow bash-style comments
