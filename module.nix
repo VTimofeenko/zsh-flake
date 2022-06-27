@@ -33,7 +33,7 @@ in
       })
       # the next line conditionally installs direnv if it is enabled
       # just having pkgs.direnv is not enough, it does not get added to the path
-    ] ++ (if config ? my_zsh && cfg.direnv_enable then [ pkgs.direnv ] else []);
+    ] ++ (if config ? my_zsh && cfg.direnv_enable then [ pkgs.direnv ] else [ ]);
     programs.zsh = {
       enable = true;
       enableCompletion = true;
@@ -42,7 +42,7 @@ in
         enable = true;
       };
       shellAliases = {
-        e = "$EDITOR";  # looks like 'vim' is needed here so that proper vimrc is being picked up
+        e = "$EDITOR"; # looks like 'vim' is needed here so that proper vimrc is being picked up
         nvim = "$EDITOR";
         vim = "$EDITOR";
         ls = "${pkgs.exa}/bin/exa -h --group-directories-first --icons";
@@ -63,23 +63,23 @@ in
         lg = "lazygit";
       };
       setOptions = [
-        "INTERACTIVE_COMMENTS"  # allow bash-style comments
+        "INTERACTIVE_COMMENTS" # allow bash-style comments
         # history
-        "BANG_HIST"  # enable logging !!-like commands
-        "EXTENDED_HISTORY"          # Write the history file in the ":start:elapsed;command" format.
-        "INC_APPEND_HISTORY"        # Write to the history file immediately, not when the shell exits.
-        "SHARE_HISTORY"             # Share history between all sessions.
-        "HIST_EXPIRE_DUPS_FIRST"    # Expire duplicate entries first when trimming history.
-        "HIST_IGNORE_DUPS"          # Don't record an entry that was just recorded again.
-        "HIST_IGNORE_ALL_DUPS"      # Delete old recorded entry if new entry is a duplicate.
-        "HIST_FIND_NO_DUPS"         # Do not display a line previously found.
-        "HIST_IGNORE_SPACE"         # Don't record an entry starting with a space.
-        "HIST_SAVE_NO_DUPS"         # Don't write duplicate entries in the history file.
-        "HIST_REDUCE_BLANKS"        # Remove superfluous blanks before recording entry.
-        "HIST_VERIFY"               # Don't execute immediately upon history expansion.
+        "BANG_HIST" # enable logging !!-like commands
+        "EXTENDED_HISTORY" # Write the history file in the ":start:elapsed;command" format.
+        "INC_APPEND_HISTORY" # Write to the history file immediately, not when the shell exits.
+        "SHARE_HISTORY" # Share history between all sessions.
+        "HIST_EXPIRE_DUPS_FIRST" # Expire duplicate entries first when trimming history.
+        "HIST_IGNORE_DUPS" # Don't record an entry that was just recorded again.
+        "HIST_IGNORE_ALL_DUPS" # Delete old recorded entry if new entry is a duplicate.
+        "HIST_FIND_NO_DUPS" # Do not display a line previously found.
+        "HIST_IGNORE_SPACE" # Don't record an entry starting with a space.
+        "HIST_SAVE_NO_DUPS" # Don't write duplicate entries in the history file.
+        "HIST_REDUCE_BLANKS" # Remove superfluous blanks before recording entry.
+        "HIST_VERIFY" # Don't execute immediately upon history expansion.
         "HIST_FCNTL_LOCK" # enable fcntl syscall for saving history
         # cd management
-        "AUTO_CD"  # automatically cd into directory
+        "AUTO_CD" # automatically cd into directory
       ];
       interactiveShellInit = ''
         # Enable vim editing of command line
