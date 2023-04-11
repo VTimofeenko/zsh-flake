@@ -1,3 +1,7 @@
+# Archival note
+
+This repo has been merged into the [monorepo](https://github.com/VTimofeenko/monorepo-machine-config) as an output module.
+
 # My zsh configuration flake
 
 Nix flake that installs a module with zsh:
